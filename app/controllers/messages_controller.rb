@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :set_message, only: [:show, :edit]
+  before_action :set_message, only: [:show, :edit, :destroy]
   def new
     @message = Message.new
   end
@@ -17,6 +17,10 @@ class MessagesController < ApplicationController
   def show
   end
   def edit
+  end
+  def destroy
+    @message.destroy
+    redirect_to messages_path
   end
   private
   def message_params
