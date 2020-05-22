@@ -3,8 +3,12 @@ class MessagesController < ApplicationController
     @message = Message.new
   end
   def create
-    Message.create(message_params)
-    redirect_to messages_path
+    @message = Message.new(message_params)
+    if @message.save
+      redirect_to messages_path
+    else
+      render :new
+    end
   end
   def index
     @messages = Message.all
