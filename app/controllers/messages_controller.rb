@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+  before_action :set_message, only: [:show, :edit]
   def new
     @message = Message.new
   end
@@ -14,13 +15,14 @@ class MessagesController < ApplicationController
     @messages = Message.all
   end
   def show
-    @message = Message.find(params[:id])
   end
   def edit
-    @message = Message.find(params[:id])
   end
   private
   def message_params
     params.require(:message).permit(:content)
+  end
+  def set_message
+    @message = Message.find(params[:id])
   end
 end
