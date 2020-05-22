@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
   end
   def confirm
     @message = Message.new(message_params)
+    render :new if @message.invalid?
   end
   def create
     @message = Message.new(message_params)
@@ -14,9 +15,9 @@ class MessagesController < ApplicationController
       if @message.save
         redirect_to messages_path
       else
-      render :new
+        render :new
+      end
     end
-  end
   end
   def index
     @messages = Message.all
