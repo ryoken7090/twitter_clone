@@ -16,6 +16,9 @@ class MessagesController < ApplicationController
   def show
     @message = Message.find(params[:id])
   end
+  def edit
+    @message = Message.find(params[:id])
+  end
   private
   def message_params
     params.require(:message).permit(:content)
