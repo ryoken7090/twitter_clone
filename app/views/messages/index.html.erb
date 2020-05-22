@@ -2,3 +2,4 @@
 <% @messages.each do |message| %>
     <p><%= link_to message.content, message_path(message.id) %></p>
 <% end %>
+<%= link_to '***** つぶやく *****', new_message_path %>
