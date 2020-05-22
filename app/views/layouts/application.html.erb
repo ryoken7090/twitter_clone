@@ -10,9 +10,13 @@
   </head>
 
   <body>
+    <div class="container">
+
+
     <header class="header">
       <%= link_to 'みんなのつぶやき', messages_path,{class: "index_link"} %>
     </header>
     <%= yield %>
+    </div>
   </body>
 </html>

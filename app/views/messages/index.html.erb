@@ -1,4 +1,3 @@
-<h1>index</h1>
 <% @messages.each do |message| %>
     <p><%= link_to message.content, message_path(message.id) %></p>
 <% end %>

@@ -1,10 +1,19 @@
-h1{
-  font-size: 50px;
+body{
+  width: 600px;
+  margin: 0 auto;
+  border: solid;
+  border-width: thin;
 }
+// .container {
+//   position: relative;
+//   height: 100%;
+//   border: solid;
+// }
 .header {
   background-color: skyblue;
   height: 50px;
   font-size: 2rem;
+  width: 100%;
 }
 .index_link {
   color: white;
