@@ -1,25 +1,28 @@
-body{
-  width: 600px;
-  margin: 0 auto;
-  border: solid;
-  border-width: thin;
+.container{
+  padding: 0;
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 600px;
+  margin: 20px auto;
+  border: solid 1px #eeeeee;
 }
-// .container {
-//   position: relative;
-//   height: 100%;
-//   border: solid;
-// }
+.contents {
+  position: relative;
+  overflow: hidden;
+}
 .header {
   background-color: skyblue;
   height: 50px;
-  font-size: 2rem;
-  width: 100%;
+  font-size: 1.5rem;
 }
 .index_link {
   color: white;
   text-decoration: none;
 }
-
-// Place all the styles related to the messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.content {
+  text-decoration: none;
+  border-bottom: solid 1px #eeeeee;
+  color: black;
+  width: 100%;
+  display: block;
+}
