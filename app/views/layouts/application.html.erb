@@ -12,6 +12,7 @@
   <div class="container">
     <header class="header">
       <%= link_to 'みんなのつぶやき', messages_path,{class: "index_link"} %>
+      <%= link_to 'つぶやく', new_message_path,{class: "new_btn"} %>
     </header>
     <%= yield %>
   </div>
